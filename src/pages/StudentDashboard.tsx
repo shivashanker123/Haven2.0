@@ -40,21 +40,21 @@ export const StudentDashboard: React.FC = () => {
       description: 'Access mental health resources and guides',
       icon: BookOpen,
       color: 'from-blue-500 to-blue-600',
-      action: () => console.log('Navigate to resources'),
+      action: () => window.location.href = '/resources',
     },
     {
       title: 'Self-Care Activities',
       description: 'Practice mindfulness and wellness exercises',
       icon: Heart,
       color: 'from-pink-500 to-rose-600',
-      action: () => console.log('Navigate to self-care'),
+      action: () => window.location.href = '/self-care',
     },
     {
       title: 'Book Session',
       description: 'Schedule a counseling appointment',
       icon: Calendar,
       color: 'from-green-500 to-emerald-600',
-      action: () => console.log('Navigate to booking'),
+      action: () => window.location.href = '/book-session',
     },
   ];
 

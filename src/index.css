@@ -216,8 +216,9 @@
   }
 
   .typing-effect {
-    border-right: 2px solid currentColor;
-    animation: typing 3s steps(30) infinite, blink 1s infinite;
+    /* Removed auto-typing animation */
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   /* Interactive Background Elements */

@@ -9,6 +9,9 @@ import { StudentLogin } from "./pages/StudentLogin";
 import { AdminLogin } from "./pages/AdminLogin";
 import { StudentDashboard } from "./pages/StudentDashboard";
 import { AdminDashboard } from "./pages/AdminDashboard";
+import { Resources } from "./pages/Resources";
+import { SelfCare } from "./pages/SelfCare";
+import { BookSession } from "./pages/BookSession";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +31,9 @@ const App = () => (
             <Route path="/student-dashboard/*" element={<StudentDashboard />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/admin-dashboard/*" element={<AdminDashboard />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/self-care" element={<SelfCare />} />
+            <Route path="/book-session" element={<BookSession />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

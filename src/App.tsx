@@ -12,6 +12,10 @@ import { AdminDashboard } from "./pages/AdminDashboard";
 import { Resources } from "./pages/Resources";
 import { SelfCare } from "./pages/SelfCare";
 import { BookSession } from "./pages/BookSession";
+import { ScreeningTests } from "./pages/ScreeningTests";
+import { Results } from "./pages/Results";
+import { StudentRequests } from "./pages/StudentRequests";
+import { Alerts } from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,10 +37,10 @@ const App = () => (
             <Route path="/student-dashboard/booking" element={<BookSession />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
             <Route path="/admin-dashboard/resources" element={<Resources />} />
-            <Route path="/admin-dashboard/screening" element={<AdminDashboard />} />
-            <Route path="/admin-dashboard/results" element={<AdminDashboard />} />
-            <Route path="/admin-dashboard/requests" element={<AdminDashboard />} />
-            <Route path="/admin-dashboard/alerts" element={<AdminDashboard />} />
+            <Route path="/admin-dashboard/screening" element={<ScreeningTests />} />
+            <Route path="/admin-dashboard/results" element={<Results />} />
+            <Route path="/admin-dashboard/requests" element={<StudentRequests />} />
+            <Route path="/admin-dashboard/alerts" element={<Alerts />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { 
@@ -11,7 +12,8 @@ import {
   AlertTriangle,
   LogOut,
   Menu,
-  X
+  X,
+  BookText // 1. Import the new icon for the Journal
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -26,7 +28,9 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle, userType }) 
   const navigate = useNavigate();
 
   const studentItems = [
-    { title: 'Dashboard', url: '/student-dashboard', icon: Home },
+    { title: 'Personel Assistant', url: '/student-dashboard', icon: Home },
+    // 2. Add the new Journal item here
+    { title: 'Journal', url: '/student-dashboard/journal', icon: BookText },
     { title: 'Resources', url: '/student-dashboard/resources', icon: BookOpen },
     { title: 'Self-Care', url: '/student-dashboard/self-care', icon: Heart },
     { title: 'Book Session', url: '/student-dashboard/booking', icon: Calendar },

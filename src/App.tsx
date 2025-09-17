@@ -1,3 +1,5 @@
+
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -17,6 +19,8 @@ import { Results } from "./pages/Results";
 import { StudentRequests } from "./pages/StudentRequests";
 import { Alerts } from "./pages/Alerts";
 import NotFound from "./pages/NotFound";
+import { CommunityPage } from "./pages/CommunityPage";
+import { JournalPage } from "./pages/JournalPage";
 
 const queryClient = new QueryClient();
 
@@ -28,11 +32,13 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <Routes>
+            <Route path="/community" element={<CommunityPage/>}/>
             <Route path="/" element={<LandingPage />} />
             <Route path="/student-login" element={<StudentLogin />} />
             <Route path="/admin-login" element={<AdminLogin />} />
             <Route path="/student-dashboard" element={<StudentDashboard />} />
             <Route path="/student-dashboard/resources" element={<Resources />} />
+            <Route path="/student-dashboard/journal" element={<JournalPage/>}/>
             <Route path="/student-dashboard/self-care" element={<SelfCare />} />
             <Route path="/student-dashboard/booking" element={<BookSession />} />
             <Route path="/admin-dashboard" element={<AdminDashboard />} />
